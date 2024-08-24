@@ -18,18 +18,21 @@ public class TestPerformance {
     public static void main(String[] args) {
         Person person = Person.newBuilder().setName("John").setAge(44).build();
         JsonPerson jsonPerson = new JsonPerson("John", 44);
+        json(jsonPerson);
+        proto(person);
 
 
-        for (int i = 0; i < 5; i++){
+        /*for (int i = 0; i < 5; i++){
             runTest("json", () -> json(jsonPerson));
             runTest("proto", () -> proto(person));
-        }
+        }*/
 
     }
 
     private static void proto(Person person)  {
        byte[] bytes =  person.toByteArray();
         try {
+            log.info("proto bytes length: {}", bytes.length);
             Person.parseFrom(bytes);
         } catch (InvalidProtocolBufferException e) {
             throw new RuntimeException(e);
@@ -39,6 +42,7 @@ public class TestPerformance {
     private static void json(JsonPerson jsonPerson) {
         try{
             byte[] bytes  = mapper.writeValueAsBytes(jsonPerson);
+            log.info("json bytes length: {}", bytes.length);
             mapper.readValue(bytes, JsonPerson.class);
 
         }catch (IOException ex){
