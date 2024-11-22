@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
   private Television() {
     brand_ = "";
     type_ = 0;
+    fullname_ = "";
   }
 
   @java.lang.Override
@@ -98,6 +99,45 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.grpc.models.sec05.v3.Type.UNRECOGNIZED : result;
   }
 
+  public static final int FULLNAME_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fullname_ = "";
+  /**
+   * <code>string fullname = 4;</code>
+   * @return The fullname.
+   */
+  @java.lang.Override
+  public java.lang.String getFullname() {
+    java.lang.Object ref = fullname_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      fullname_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string fullname = 4;</code>
+   * @return The bytes for fullname.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFullnameBytes() {
+    java.lang.Object ref = fullname_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      fullname_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -118,6 +158,9 @@ private static final long serialVersionUID = 0L;
     if (type_ != com.grpc.models.sec05.v3.Type.HD.getNumber()) {
       output.writeEnum(3, type_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullname_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fullname_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -133,6 +176,9 @@ private static final long serialVersionUID = 0L;
     if (type_ != com.grpc.models.sec05.v3.Type.HD.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, type_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullname_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fullname_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -152,6 +198,8 @@ private static final long serialVersionUID = 0L;
     if (!getBrand()
         .equals(other.getBrand())) return false;
     if (type_ != other.type_) return false;
+    if (!getFullname()
+        .equals(other.getFullname())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -167,6 +215,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getBrand().hashCode();
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
+    hash = (37 * hash) + FULLNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getFullname().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -300,6 +350,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       brand_ = "";
       type_ = 0;
+      fullname_ = "";
       return this;
     }
 
@@ -338,6 +389,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.fullname_ = fullname_;
       }
     }
 
@@ -393,6 +447,11 @@ private static final long serialVersionUID = 0L;
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
       }
+      if (!other.getFullname().isEmpty()) {
+        fullname_ = other.fullname_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -429,6 +488,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 24
+            case 34: {
+              fullname_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -567,6 +631,78 @@ private static final long serialVersionUID = 0L;
     public Builder clearType() {
       bitField0_ = (bitField0_ & ~0x00000002);
       type_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object fullname_ = "";
+    /**
+     * <code>string fullname = 4;</code>
+     * @return The fullname.
+     */
+    public java.lang.String getFullname() {
+      java.lang.Object ref = fullname_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fullname_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string fullname = 4;</code>
+     * @return The bytes for fullname.
+     */
+    public com.google.protobuf.ByteString
+        getFullnameBytes() {
+      java.lang.Object ref = fullname_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fullname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string fullname = 4;</code>
+     * @param value The fullname to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFullname(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      fullname_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string fullname = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFullname() {
+      fullname_ = getDefaultInstance().getFullname();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string fullname = 4;</code>
+     * @param value The bytes for fullname to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFullnameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      fullname_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

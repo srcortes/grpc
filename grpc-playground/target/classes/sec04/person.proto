@@ -1,0 +1,15 @@
+syntax = "proto3";
+package sec04;
+
+import "sec04/one-of.proto";
+import "sec03/Job.proto";
+option java_package = "com.grpc.models.sec04";
+option java_outer_classname = "Persons";
+option java_multiple_files = true;
+
+message Person{
+  string name = 1;
+  int32 age = 2;
+  Email email = 3;
+  Phone phone = 4;
+}

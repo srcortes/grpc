@@ -30,4 +30,16 @@ public interface TelevisionOrBuilder extends
    * @return The type.
    */
   com.grpc.models.sec05.v3.Type getType();
+
+  /**
+   * <code>string fullname = 4;</code>
+   * @return The fullname.
+   */
+  java.lang.String getFullname();
+  /**
+   * <code>string fullname = 4;</code>
+   * @return The bytes for fullname.
+   */
+  com.google.protobuf.ByteString
+      getFullnameBytes();
 }
