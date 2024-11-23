@@ -1,0 +1,45 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore compiled files
+*.class
+*.o
+*.so
+
+# Ignore dependencies
+node_modules/
+vendor/
+
+# Ignore build output
+dist/
+build/
+
+
+
+# Ignore environment and secrets files
+.env
+.env.local
+secrets.json
+
+# Ignore IDE or editor files
+.idea/
+.vscode/
+*.iml
+
+# Ignore OS-generated files
+__pycache__/
+*.pyc
+
+# Ignore Git itself
+.git/
+
+# Ignore custom directory
+my-temp-folder/

@@ -1,5 +1,0 @@
-syntax = "proto3";
-package sec04;
-option java_package = "com.grpc.models.sec04";
-option java_outer_classname = "Common";
-option java_multiple_files = true;
