@@ -1,7 +1,6 @@
 package common;
 
 import io.grpc.*;
-import sec06.BankService;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -21,17 +20,18 @@ public class GrpcServer {
     }
 
     public static GrpcServer create(int port, BindableService... services){
-        ServerBuilder builder = ServerBuilder.forPort(port);
+        ServerBuilder<?> builder = ServerBuilder.forPort(port);
         Arrays.asList(services).forEach(builder::addService);
         return new GrpcServer(builder.build());
 
     }
 
     public GrpcServer start() throws IOException {
-        List<String> services = server.getServices().stream()
+        server.getServices().stream()
                 .map(ServerServiceDefinition::getServiceDescriptor)
                 .map(ServiceDescriptor::getName).collect(Collectors.toList());
         server.start();
+        System.out.println("*****");
         return this;
     }
 
