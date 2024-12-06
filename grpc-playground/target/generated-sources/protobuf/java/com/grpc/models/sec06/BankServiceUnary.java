@@ -25,6 +25,11 @@ public final class BankServiceUnary {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sec06_AccountBalance_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_sec06_AllAccountResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_sec06_AllAccountResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -34,17 +39,22 @@ public final class BankServiceUnary {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030sec06/bank-service.proto\022\005sec06\"-\n\023Bal" +
-      "anceCheckRequest\022\026\n\016account_number\030\001 \001(\005" +
-      "\"9\n\016AccountBalance\022\026\n\016account_number\030\001 \001" +
-      "(\005\022\017\n\007balance\030\002 \001(\0052U\n\013BankService\022F\n\021Ge" +
-      "tAccountBalance\022\032.sec06.BalanceCheckRequ" +
-      "est\032\025.sec06.AccountBalanceB+\n\025com.grpc.m" +
-      "odels.sec06B\020BankServiceUnaryP\001b\006proto3"
+      "\n\030sec06/bank-service.proto\022\005sec06\032\033googl" +
+      "e/protobuf/empty.proto\"-\n\023BalanceCheckRe" +
+      "quest\022\026\n\016account_number\030\001 \001(\005\"9\n\016Account" +
+      "Balance\022\026\n\016account_number\030\001 \001(\005\022\017\n\007balan" +
+      "ce\030\002 \001(\005\"<\n\022AllAccountResponse\022&\n\007accoun" +
+      "t\030\001 \003(\0132\025.sec06.AccountBalance2\230\001\n\013BankS" +
+      "ervice\022F\n\021GetAccountBalance\022\032.sec06.Bala" +
+      "nceCheckRequest\032\025.sec06.AccountBalance\022A" +
+      "\n\014GetAllAcount\022\026.google.protobuf.Empty\032\031" +
+      ".sec06.AllAccountResponseB+\n\025com.grpc.mo" +
+      "dels.sec06B\020BankServiceUnaryP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.EmptyProto.getDescriptor(),
         });
     internal_static_sec06_BalanceCheckRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -58,6 +68,13 @@ public final class BankServiceUnary {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_sec06_AccountBalance_descriptor,
         new java.lang.String[] { "AccountNumber", "Balance", });
+    internal_static_sec06_AllAccountResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_sec06_AllAccountResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_sec06_AllAccountResponse_descriptor,
+        new java.lang.String[] { "Account", });
+    com.google.protobuf.EmptyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

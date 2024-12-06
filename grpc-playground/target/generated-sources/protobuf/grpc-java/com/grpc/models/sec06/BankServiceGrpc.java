@@ -46,6 +46,37 @@ public final class BankServiceGrpc {
     return getGetAccountBalanceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.grpc.models.sec06.AllAccountResponse> getGetAllAcountMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAllAcount",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.grpc.models.sec06.AllAccountResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.grpc.models.sec06.AllAccountResponse> getGetAllAcountMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.grpc.models.sec06.AllAccountResponse> getGetAllAcountMethod;
+    if ((getGetAllAcountMethod = BankServiceGrpc.getGetAllAcountMethod) == null) {
+      synchronized (BankServiceGrpc.class) {
+        if ((getGetAllAcountMethod = BankServiceGrpc.getGetAllAcountMethod) == null) {
+          BankServiceGrpc.getGetAllAcountMethod = getGetAllAcountMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.grpc.models.sec06.AllAccountResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAllAcount"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.models.sec06.AllAccountResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BankServiceMethodDescriptorSupplier("GetAllAcount"))
+              .build();
+        }
+      }
+    }
+    return getGetAllAcountMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -95,10 +126,20 @@ public final class BankServiceGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
     default void getAccountBalance(com.grpc.models.sec06.BalanceCheckRequest request,
         io.grpc.stub.StreamObserver<com.grpc.models.sec06.AccountBalance> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAccountBalanceMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getAllAcount(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.grpc.models.sec06.AllAccountResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllAcountMethod(), responseObserver);
     }
   }
 
@@ -130,11 +171,22 @@ public final class BankServiceGrpc {
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
     public void getAccountBalance(com.grpc.models.sec06.BalanceCheckRequest request,
         io.grpc.stub.StreamObserver<com.grpc.models.sec06.AccountBalance> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAccountBalanceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getAllAcount(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.grpc.models.sec06.AllAccountResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAllAcountMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -155,10 +207,20 @@ public final class BankServiceGrpc {
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
     public com.grpc.models.sec06.AccountBalance getAccountBalance(com.grpc.models.sec06.BalanceCheckRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAccountBalanceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.grpc.models.sec06.AllAccountResponse getAllAcount(com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAllAcountMethod(), getCallOptions(), request);
     }
   }
 
@@ -179,15 +241,27 @@ public final class BankServiceGrpc {
     }
 
     /**
+     * <pre>
+     *unary
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.models.sec06.AccountBalance> getAccountBalance(
         com.grpc.models.sec06.BalanceCheckRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAccountBalanceMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.grpc.models.sec06.AllAccountResponse> getAllAcount(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAllAcountMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ACCOUNT_BALANCE = 0;
+  private static final int METHODID_GET_ALL_ACOUNT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -209,6 +283,10 @@ public final class BankServiceGrpc {
         case METHODID_GET_ACCOUNT_BALANCE:
           serviceImpl.getAccountBalance((com.grpc.models.sec06.BalanceCheckRequest) request,
               (io.grpc.stub.StreamObserver<com.grpc.models.sec06.AccountBalance>) responseObserver);
+          break;
+        case METHODID_GET_ALL_ACOUNT:
+          serviceImpl.getAllAcount((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<com.grpc.models.sec06.AllAccountResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -235,6 +313,13 @@ public final class BankServiceGrpc {
               com.grpc.models.sec06.BalanceCheckRequest,
               com.grpc.models.sec06.AccountBalance>(
                 service, METHODID_GET_ACCOUNT_BALANCE)))
+        .addMethod(
+          getGetAllAcountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.grpc.models.sec06.AllAccountResponse>(
+                service, METHODID_GET_ALL_ACOUNT)))
         .build();
   }
 
@@ -284,6 +369,7 @@ public final class BankServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BankServiceFileDescriptorSupplier())
               .addMethod(getGetAccountBalanceMethod())
+              .addMethod(getGetAllAcountMethod())
               .build();
         }
       }

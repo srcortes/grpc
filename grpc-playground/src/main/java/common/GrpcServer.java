@@ -31,7 +31,6 @@ public class GrpcServer {
                 .map(ServerServiceDefinition::getServiceDescriptor)
                 .map(ServiceDescriptor::getName).collect(Collectors.toList());
         server.start();
-        System.out.println("*****");
         return this;
     }
 
@@ -40,6 +39,7 @@ public class GrpcServer {
     }
 
     public void stop(){
+        System.out.println("stoped");
         server.shutdownNow();
     }
 
