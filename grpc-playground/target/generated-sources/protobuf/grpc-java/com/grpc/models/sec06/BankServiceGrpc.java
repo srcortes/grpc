@@ -77,6 +77,37 @@ public final class BankServiceGrpc {
     return getGetAllAcountMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.grpc.models.sec06.WithDrawRequest,
+      com.grpc.models.sec06.Money> getWithDrawMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "WithDraw",
+      requestType = com.grpc.models.sec06.WithDrawRequest.class,
+      responseType = com.grpc.models.sec06.Money.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.grpc.models.sec06.WithDrawRequest,
+      com.grpc.models.sec06.Money> getWithDrawMethod() {
+    io.grpc.MethodDescriptor<com.grpc.models.sec06.WithDrawRequest, com.grpc.models.sec06.Money> getWithDrawMethod;
+    if ((getWithDrawMethod = BankServiceGrpc.getWithDrawMethod) == null) {
+      synchronized (BankServiceGrpc.class) {
+        if ((getWithDrawMethod = BankServiceGrpc.getWithDrawMethod) == null) {
+          BankServiceGrpc.getWithDrawMethod = getWithDrawMethod =
+              io.grpc.MethodDescriptor.<com.grpc.models.sec06.WithDrawRequest, com.grpc.models.sec06.Money>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "WithDraw"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.models.sec06.WithDrawRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.models.sec06.Money.getDefaultInstance()))
+              .setSchemaDescriptor(new BankServiceMethodDescriptorSupplier("WithDraw"))
+              .build();
+        }
+      }
+    }
+    return getWithDrawMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -127,7 +158,7 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
-     *unary
+     *unary send request and receive a response
      * </pre>
      */
     default void getAccountBalance(com.grpc.models.sec06.BalanceCheckRequest request,
@@ -140,6 +171,16 @@ public final class BankServiceGrpc {
     default void getAllAcount(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.grpc.models.sec06.AllAccountResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllAcountMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     *server streaming send a request and receive multiple response
+     * </pre>
+     */
+    default void withDraw(com.grpc.models.sec06.WithDrawRequest request,
+        io.grpc.stub.StreamObserver<com.grpc.models.sec06.Money> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWithDrawMethod(), responseObserver);
     }
   }
 
@@ -172,7 +213,7 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
-     *unary
+     *unary send request and receive a response
      * </pre>
      */
     public void getAccountBalance(com.grpc.models.sec06.BalanceCheckRequest request,
@@ -187,6 +228,17 @@ public final class BankServiceGrpc {
         io.grpc.stub.StreamObserver<com.grpc.models.sec06.AllAccountResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAllAcountMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *server streaming send a request and receive multiple response
+     * </pre>
+     */
+    public void withDraw(com.grpc.models.sec06.WithDrawRequest request,
+        io.grpc.stub.StreamObserver<com.grpc.models.sec06.Money> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getWithDrawMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -208,7 +260,7 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
-     *unary
+     *unary send request and receive a response
      * </pre>
      */
     public com.grpc.models.sec06.AccountBalance getAccountBalance(com.grpc.models.sec06.BalanceCheckRequest request) {
@@ -221,6 +273,17 @@ public final class BankServiceGrpc {
     public com.grpc.models.sec06.AllAccountResponse getAllAcount(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAllAcountMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *server streaming send a request and receive multiple response
+     * </pre>
+     */
+    public java.util.Iterator<com.grpc.models.sec06.Money> withDraw(
+        com.grpc.models.sec06.WithDrawRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getWithDrawMethod(), getCallOptions(), request);
     }
   }
 
@@ -242,7 +305,7 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
-     *unary
+     *unary send request and receive a response
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.models.sec06.AccountBalance> getAccountBalance(
@@ -262,6 +325,7 @@ public final class BankServiceGrpc {
 
   private static final int METHODID_GET_ACCOUNT_BALANCE = 0;
   private static final int METHODID_GET_ALL_ACOUNT = 1;
+  private static final int METHODID_WITH_DRAW = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -287,6 +351,10 @@ public final class BankServiceGrpc {
         case METHODID_GET_ALL_ACOUNT:
           serviceImpl.getAllAcount((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.grpc.models.sec06.AllAccountResponse>) responseObserver);
+          break;
+        case METHODID_WITH_DRAW:
+          serviceImpl.withDraw((com.grpc.models.sec06.WithDrawRequest) request,
+              (io.grpc.stub.StreamObserver<com.grpc.models.sec06.Money>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -320,6 +388,13 @@ public final class BankServiceGrpc {
               com.google.protobuf.Empty,
               com.grpc.models.sec06.AllAccountResponse>(
                 service, METHODID_GET_ALL_ACOUNT)))
+        .addMethod(
+          getWithDrawMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.grpc.models.sec06.WithDrawRequest,
+              com.grpc.models.sec06.Money>(
+                service, METHODID_WITH_DRAW)))
         .build();
   }
 
@@ -370,6 +445,7 @@ public final class BankServiceGrpc {
               .setSchemaDescriptor(new BankServiceFileDescriptorSupplier())
               .addMethod(getGetAccountBalanceMethod())
               .addMethod(getGetAllAcountMethod())
+              .addMethod(getWithDrawMethod())
               .build();
         }
       }

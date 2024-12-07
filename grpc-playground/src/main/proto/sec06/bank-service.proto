@@ -20,8 +20,20 @@ message AllAccountResponse{
   repeated AccountBalance account = 1;
 }
 
+message WithDrawRequest{
+  int32 account_number = 1;
+  int32 amount = 2;
+}
+
+message Money{
+  int32 amount = 1;
+}
+
 service BankService{
-  //unary
+  //unary send request and receive a response
   rpc GetAccountBalance(BalanceCheckRequest) returns (AccountBalance);
   rpc GetAllAcount(google.protobuf.Empty) returns (AllAccountResponse);
+
+  //server streaming send a request and receive multiple response
+  rpc WithDraw(WithDrawRequest) returns(stream Money);
 }
