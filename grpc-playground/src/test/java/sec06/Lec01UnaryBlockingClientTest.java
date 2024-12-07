@@ -1,6 +1,7 @@
 package sec06;
 
 
+import com.google.protobuf.Empty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -19,6 +20,14 @@ public class Lec01UnaryBlockingClientTest extends AbstractTest{
                 .getAccountBalance(request);
         logger.info("unary balance received: {}", balance);
         Assertions.assertEquals(100, balance.getBalance());
+    }
+
+    @Test
+    public void allAccountTest(){
+        var allAccount = this.blockingStub.getAllAcount(Empty.getDefaultInstance());
+        logger.info("all accounts: {}", allAccount.getAccountCount());
+        Assertions.assertEquals(10, allAccount.getAccountCount());
+
 
     }
 
