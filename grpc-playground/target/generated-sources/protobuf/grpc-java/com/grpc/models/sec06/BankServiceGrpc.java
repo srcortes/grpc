@@ -108,6 +108,37 @@ public final class BankServiceGrpc {
     return getWithDrawMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.grpc.models.sec06.DepositRequest,
+      com.grpc.models.sec06.AccountBalance> getDepositMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Deposit",
+      requestType = com.grpc.models.sec06.DepositRequest.class,
+      responseType = com.grpc.models.sec06.AccountBalance.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.grpc.models.sec06.DepositRequest,
+      com.grpc.models.sec06.AccountBalance> getDepositMethod() {
+    io.grpc.MethodDescriptor<com.grpc.models.sec06.DepositRequest, com.grpc.models.sec06.AccountBalance> getDepositMethod;
+    if ((getDepositMethod = BankServiceGrpc.getDepositMethod) == null) {
+      synchronized (BankServiceGrpc.class) {
+        if ((getDepositMethod = BankServiceGrpc.getDepositMethod) == null) {
+          BankServiceGrpc.getDepositMethod = getDepositMethod =
+              io.grpc.MethodDescriptor.<com.grpc.models.sec06.DepositRequest, com.grpc.models.sec06.AccountBalance>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Deposit"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.models.sec06.DepositRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.models.sec06.AccountBalance.getDefaultInstance()))
+              .setSchemaDescriptor(new BankServiceMethodDescriptorSupplier("Deposit"))
+              .build();
+        }
+      }
+    }
+    return getDepositMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -182,6 +213,16 @@ public final class BankServiceGrpc {
         io.grpc.stub.StreamObserver<com.grpc.models.sec06.Money> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWithDrawMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     *Client streaming
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<com.grpc.models.sec06.DepositRequest> deposit(
+        io.grpc.stub.StreamObserver<com.grpc.models.sec06.AccountBalance> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getDepositMethod(), responseObserver);
+    }
   }
 
   /**
@@ -239,6 +280,17 @@ public final class BankServiceGrpc {
         io.grpc.stub.StreamObserver<com.grpc.models.sec06.Money> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getWithDrawMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *Client streaming
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<com.grpc.models.sec06.DepositRequest> deposit(
+        io.grpc.stub.StreamObserver<com.grpc.models.sec06.AccountBalance> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getDepositMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -326,6 +378,7 @@ public final class BankServiceGrpc {
   private static final int METHODID_GET_ACCOUNT_BALANCE = 0;
   private static final int METHODID_GET_ALL_ACOUNT = 1;
   private static final int METHODID_WITH_DRAW = 2;
+  private static final int METHODID_DEPOSIT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -366,6 +419,9 @@ public final class BankServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_DEPOSIT:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.deposit(
+              (io.grpc.stub.StreamObserver<com.grpc.models.sec06.AccountBalance>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -395,6 +451,13 @@ public final class BankServiceGrpc {
               com.grpc.models.sec06.WithDrawRequest,
               com.grpc.models.sec06.Money>(
                 service, METHODID_WITH_DRAW)))
+        .addMethod(
+          getDepositMethod(),
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+            new MethodHandlers<
+              com.grpc.models.sec06.DepositRequest,
+              com.grpc.models.sec06.AccountBalance>(
+                service, METHODID_DEPOSIT)))
         .build();
   }
 
@@ -446,6 +509,7 @@ public final class BankServiceGrpc {
               .addMethod(getGetAccountBalanceMethod())
               .addMethod(getGetAllAcountMethod())
               .addMethod(getWithDrawMethod())
+              .addMethod(getDepositMethod())
               .build();
         }
       }

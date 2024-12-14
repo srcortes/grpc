@@ -27,6 +27,7 @@ com\grpc\models\sec06\BankServiceGrpc$MethodHandlers.class
 com\grpc\models\sec05\v2\TelevisionExample.class
 common\Demo.class
 com\grpc\models\sec04\Car$Builder.class
+com\grpc\models\sec06\DepositRequest$RequestCase.class
 com\grpc\models\sec05\v3\TelevisionOrBuilder.class
 com\grpc\models\sec04\Persons.class
 sec06\BankService.class
@@ -89,6 +90,7 @@ com\grpc\models\sec06\Money$Builder.class
 sec03\OneOf.class
 com\grpc\models\sec03\JobPerson$Person$Builder.class
 com\grpc\models\sec04\Wrapper$SampleOrBuilder.class
+com\grpc\models\sec06\DepositRequest.class
 com\grpc\models\sec03\JobPerson$Person$1.class
 sec03\DefaultValues.class
 com\grpc\models\sec04\Credentials.class
@@ -104,6 +106,7 @@ com\grpc\models\sec05\v4\Television$Builder.class
 com\grpc\models\sec05\v2\TelevisionOrBuilder.class
 com\grpc\models\sec04\Person.class
 sec03\JsonPerson.class
+com\grpc\models\sec06\DepositRequest$1.class
 sec05\V1VersionCompability.class
 com\grpc\models\sec05\v1\Television.class
 com\grpc\models\sec04\Student$Builder.class
@@ -119,6 +122,7 @@ com\grpc\models\sec04\Common.class
 com\grpc\models\sec05\v4\Television.class
 com\grpc\models\sec06\WithDrawRequest$Builder.class
 com\grpc\models\sec04\Address$1.class
+com\grpc\models\sec06\DepositRequest$Builder.class
 com\grpc\models\sec06\AccountBalanceOrBuilder.class
 sec05\parser\V3parser.class
 sec03\Composition.class
@@ -137,6 +141,7 @@ com\grpc\models\sec06\BankServiceGrpc$BankServiceImplBase.class
 com\grpc\models\sec04\Wrapper$Sample$1.class
 com\grpc\models\sec06\BankServiceGrpc$BankServiceBaseDescriptorSupplier.class
 com\grpc\models\sec04\School$Builder.class
+com\grpc\models\sec06\DepositRequestOrBuilder.class
 com\grpc\models\sec02\PersonOrBuilder.class
 com\grpc\models\sec06\MoneyOrBuilder.class
 com\grpc\models\sec04\Dealer$Builder.class

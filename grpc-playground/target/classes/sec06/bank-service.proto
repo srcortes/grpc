@@ -29,6 +29,15 @@ message Money{
   int32 amount = 1;
 }
 
+message DepositRequest{
+  oneof request {
+    int32 account_number = 1;
+    Money money = 2;
+  }
+}
+
+
+
 service BankService{
   //unary send request and receive a response
   rpc GetAccountBalance(BalanceCheckRequest) returns (AccountBalance);
@@ -36,4 +45,7 @@ service BankService{
 
   //server streaming send a request and receive multiple response
   rpc WithDraw(WithDrawRequest) returns(stream Money);
+
+  //Client streaming
+  rpc Deposit(stream DepositRequest) returns (AccountBalance);
 }

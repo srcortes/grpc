@@ -4,6 +4,7 @@ import com.google.common.util.concurrent.Uninterruptibles;
 import com.google.protobuf.Empty;
 import com.grpc.models.sec06.*;
 import com.grpc.models.sec06.*;
+import com.grpc.models.sec06.*;
 import com.grpc.models.sec06.AccountBalance;
 import com.grpc.models.sec06.AllAccountResponse;
 import com.grpc.models.sec06.BalanceCheckRequest;
@@ -59,5 +60,10 @@ public class BankService extends BankServiceGrpc.BankServiceImplBase {
             Uninterruptibles.sleepUninterruptibly(1, TimeUnit.SECONDS);
         }
         responseObserver.onCompleted();
+    }
+
+    @Override
+    public StreamObserver<com.grpc.models.sec06.DepositRequest> deposit(StreamObserver<AccountBalance> responseObserver) {
+        return super.deposit(responseObserver);
     }
 }

@@ -2,6 +2,7 @@ E:\IdeaProjects\grpc\grpc-playground\src\main\java\sec06\GrpcClient.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec06\BankServiceUnary.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec04\OneOf.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec05\v1\ExampleTelevision.java
+E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec06\DepositRequestOrBuilder.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec04\Composition.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\grpc-java\com\grpc\models\sec06\BankServiceGrpc.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec04\Library.java
@@ -35,6 +36,7 @@ E:\IdeaProjects\grpc\grpc-playground\src\main\java\sec05\parser\V2parser.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec05\v4\Type.java
 E:\IdeaProjects\grpc\grpc-playground\src\main\java\common\GrpcServer.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec04\Wrapper.java
+E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec06\DepositRequest.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec04\Address.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec06\WithDrawRequest.java
 E:\IdeaProjects\grpc\grpc-playground\target\generated-sources\protobuf\java\com\grpc\models\sec05\v2\Television.java
