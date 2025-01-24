@@ -2,15 +2,13 @@ package sec06;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 import com.google.protobuf.Empty;
-import com.grpc.models.sec06.*;
-import com.grpc.models.sec06.*;
-import com.grpc.models.sec06.*;
 import com.grpc.models.sec06.AccountBalance;
 import com.grpc.models.sec06.AllAccountResponse;
 import com.grpc.models.sec06.BalanceCheckRequest;
 import com.grpc.models.sec06.BankServiceGrpc;
 import io.grpc.stub.StreamObserver;
 import sec06.repository.AccountRepository;
+import sec06.requesthandlers.DepositRequestHandler;
 
 import java.util.concurrent.TimeUnit;
 
@@ -64,6 +62,8 @@ public class BankService extends BankServiceGrpc.BankServiceImplBase {
 
     @Override
     public StreamObserver<com.grpc.models.sec06.DepositRequest> deposit(StreamObserver<AccountBalance> responseObserver) {
-        return super.deposit(responseObserver);
+        return new DepositRequestHandler(responseObserver);
     }
+
+
 }

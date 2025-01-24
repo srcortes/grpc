@@ -45,6 +45,16 @@ public final class BankServiceUnary {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sec06_DepositRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_sec06_TransferRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_sec06_TransferRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_sec06_TransferResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_sec06_TransferResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -64,14 +74,23 @@ public final class BankServiceUnary {
       "unt\030\002 \001(\005\"\027\n\005Money\022\016\n\006amount\030\001 \001(\005\"T\n\016De" +
       "positRequest\022\030\n\016account_number\030\001 \001(\005H\000\022\035" +
       "\n\005money\030\002 \001(\0132\014.sec06.MoneyH\000B\t\n\007request" +
-      "2\207\002\n\013BankService\022F\n\021GetAccountBalance\022\032." +
-      "sec06.BalanceCheckRequest\032\025.sec06.Accoun" +
-      "tBalance\022A\n\014GetAllAcount\022\026.google.protob" +
-      "uf.Empty\032\031.sec06.AllAccountResponse\0222\n\010W" +
-      "ithDraw\022\026.sec06.WithDrawRequest\032\014.sec06." +
-      "Money0\001\0229\n\007Deposit\022\025.sec06.DepositReques" +
-      "t\032\025.sec06.AccountBalance(\001B+\n\025com.grpc.m" +
-      "odels.sec06B\020BankServiceUnaryP\001b\006proto3"
+      "\"K\n\017TransferRequest\022\024\n\014from_account\030\001 \001(" +
+      "\005\022\022\n\nto_account\030\002 \001(\005\022\016\n\006amount\030\003 \001(\005\"\221\001" +
+      "\n\020TransferResponse\022%\n\006status\030\001 \001(\0162\025.sec" +
+      "06.TransferStatus\022+\n\014from_account\030\002 \001(\0132" +
+      "\025.sec06.AccountBalance\022)\n\nto_account\030\003 \001" +
+      "(\0132\025.sec06.AccountBalance*\'\n\016TransferSta" +
+      "tus\022\010\n\004FAIL\020\000\022\013\n\007SUCCESS\020\0012\207\002\n\013BankServi" +
+      "ce\022F\n\021GetAccountBalance\022\032.sec06.BalanceC" +
+      "heckRequest\032\025.sec06.AccountBalance\022A\n\014Ge" +
+      "tAllAcount\022\026.google.protobuf.Empty\032\031.sec" +
+      "06.AllAccountResponse\0222\n\010WithDraw\022\026.sec0" +
+      "6.WithDrawRequest\032\014.sec06.Money0\001\0229\n\007Dep" +
+      "osit\022\025.sec06.DepositRequest\032\025.sec06.Acco" +
+      "untBalance(\0012R\n\017TransferService\022?\n\010Trans" +
+      "fer\022\026.sec06.TransferRequest\032\027.sec06.Tran" +
+      "sferResponse(\0010\001B+\n\025com.grpc.models.sec0" +
+      "6B\020BankServiceUnaryP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -114,6 +133,18 @@ public final class BankServiceUnary {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_sec06_DepositRequest_descriptor,
         new java.lang.String[] { "AccountNumber", "Money", "Request", });
+    internal_static_sec06_TransferRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_sec06_TransferRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_sec06_TransferRequest_descriptor,
+        new java.lang.String[] { "FromAccount", "ToAccount", "Amount", });
+    internal_static_sec06_TransferResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_sec06_TransferResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_sec06_TransferResponse_descriptor,
+        new java.lang.String[] { "Status", "FromAccount", "ToAccount", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 
