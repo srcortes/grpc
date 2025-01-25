@@ -19,33 +19,45 @@ public class TransferRequestHandler implements StreamObserver<com.grpc.models.se
 
     @Override
     public void onNext(TransferRequest transferRequest) {
+        var status = transfer(transferRequest);
+        var response = com.grpc.models.sec06.TransferResponse.newBuilder()
+                .setFromAccount(toAccountBalance(transferRequest.getFromAccount()))
+                .setToAccount(toAccountBalance(transferRequest.getToAccount()))
+                .setStatus(status)
+                .build();
+        responseObserver.onNext(response);
 
     }
 
     @Override
     public void onError(Throwable throwable) {
-
+        logger.error("Error occurred while processing the request: " + throwable.getMessage());
     }
 
     @Override
     public void onCompleted() {
-
+        responseObserver.onCompleted();
     }
 
     private com.grpc.models.sec06.TransferStatus transfer(TransferRequest transferRequest) {
         var amount = transferRequest.getAmount();
         var fromAccount = transferRequest.getFromAccount();
         var toAccount = transferRequest.getToAccount();
+        var status = com.grpc.models.sec06.TransferStatus.FAIL;
         boolean validatingAccount = validateAccount(() -> AccountRepository.getBalance(fromAccount) >= amount
                 && (fromAccount != toAccount));
         if(validatingAccount){
-            AccountRepository.addAmount(fromAccount, amount);
+            AccountRepository.deductAmount(fromAccount, amount);
             AccountRepository.addAmount(toAccount, amount);
-        } else {
-            logger.error("Transfer failed due to insufficient balance or invalid account number");
-            return com.grpc.models.sec06.TransferStatus.FAILED;
+            status = com.grpc.models.sec06.TransferStatus.SUCCESS;
         }
-        return com.grpc.models.sec06.TransferStatus.SUCCESS;
+        return status;
+    }
+    private com.grpc.models.sec06.AccountBalance toAccountBalance(int accountNumber) {
+        return com.grpc.models.sec06.AccountBalance.newBuilder()
+                .setAccountNumber(accountNumber)
+                .setBalance(AccountRepository.getBalance(accountNumber))
+                .build();
     }
 
     private boolean validateAccount(BooleanSupplier accountValidator) {
