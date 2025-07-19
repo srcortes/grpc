@@ -7,12 +7,14 @@ import com.grpc.models.sec09.BankServiceGrpc;
 import com.grpc.models.sec09.WithDrawRequest;
 import com.grpc.models.sec09.Money;
 
+import io.grpc.StatusRuntimeException;
 import io.grpc.stub.StreamObserver;
 import io.grpc.Status;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sec09.repository.AccountRepository;
 import sec09.validator.RequestValidator;
+
 
 
 
@@ -25,7 +27,8 @@ public class BankService extends BankServiceGrpc.BankServiceImplBase {
     @Override
     public void getAccountBalance(BalanceCheckRequest request, StreamObserver<AccountBalance> responseObserver) {
         RequestValidator.validateAccount(request.getAccountNumber())
-                .map(Status::asRuntimeException)
+                .map(j -> new StatusRuntimeException(Status.INVALID_ARGUMENT
+                        .withDescription("Invalid account number")))
                 .ifPresentOrElse(responseObserver::onError,
                         () -> sendAccountBalance(request, responseObserver));
     }
@@ -37,7 +40,8 @@ public class BankService extends BankServiceGrpc.BankServiceImplBase {
                 .or(()-> RequestValidator
                         .hasSufficientBalance(request.getAmount(),
                                 AccountRepository.getBalance(request.getAccountNumber())))
-                .map(Status::asRuntimeException)
+                .map(j -> new StatusRuntimeException(Status.INVALID_ARGUMENT
+                        .withDescription("Invalid account number")))
                 .ifPresentOrElse(responseObserver::onError,
                         ()-> sendMoney(request, responseObserver));
 

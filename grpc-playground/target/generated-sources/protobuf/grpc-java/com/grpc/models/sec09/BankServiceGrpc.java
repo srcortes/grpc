@@ -127,6 +127,7 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
+     *account number shoul be between 0 and 10
      *unary send request and receive a response
      * </pre>
      */
@@ -137,6 +138,8 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
+     *amount should be 10 multiples
+     *account should have enough balance
      *server streaming send a request and receive multiple response
      * </pre>
      */
@@ -175,6 +178,7 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
+     *account number shoul be between 0 and 10
      *unary send request and receive a response
      * </pre>
      */
@@ -186,6 +190,8 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
+     *amount should be 10 multiples
+     *account should have enough balance
      *server streaming send a request and receive multiple response
      * </pre>
      */
@@ -214,6 +220,7 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
+     *account number shoul be between 0 and 10
      *unary send request and receive a response
      * </pre>
      */
@@ -224,6 +231,8 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
+     *amount should be 10 multiples
+     *account should have enough balance
      *server streaming send a request and receive multiple response
      * </pre>
      */
@@ -252,6 +261,7 @@ public final class BankServiceGrpc {
 
     /**
      * <pre>
+     *account number shoul be between 0 and 10
      *unary send request and receive a response
      * </pre>
      */

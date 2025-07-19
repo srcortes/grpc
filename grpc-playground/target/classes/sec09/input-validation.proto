@@ -26,9 +26,12 @@ message Money{
 
 
 service BankService{
+  //account number shoul be between 0 and 10
   //unary send request and receive a response
   rpc GetAccountBalance(BalanceCheckRequest) returns (AccountBalance);
 
+  //amount should be 10 multiples
+  //account should have enough balance
   //server streaming send a request and receive multiple response
   rpc WithDraw(WithDrawRequest) returns(stream Money);
 

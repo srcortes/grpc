@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="sec11.Lec02UnaryDeadLineTest" time="130.056" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/media/john/Nuevo vol/IdeaProjects/grpc/grpc-playground/target/test-classes:/media/john/Nuevo vol/IdeaProjects/grpc/grpc-playground/target/classes:/home/john/.m2/repository/io/grpc/grpc-netty-shaded/1.65.0/grpc-netty-shaded-1.65.0.jar:/home/john/.m2/repository/io/grpc/grpc-util/1.65.0/grpc-util-1.65.0.jar:/home/john/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.23/animal-sniffer-annotations-1.23.jar:/home/john/.m2/repository/io/grpc/grpc-core/1.65.0/grpc-core-1.65.0.jar:/home/john/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/john/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/home/john/.m2/repository/io/grpc/grpc-context/1.65.0/grpc-context-1.65.0.jar:/home/john/.m2/repository/com/google/guava/guava/32.1.3-android/guava-32.1.3-android.jar:/home/john/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/john/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/john/.m2/repository/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar:/home/john/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/home/john/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/home/john/.m2/repository/io/perfmark/perfmark-api/0.26.0/perfmark-api-0.26.0.jar:/home/john/.m2/repository/io/grpc/grpc-api/1.65.0/grpc-api-1.65.0.jar:/home/john/.m2/repository/io/grpc/grpc-protobuf/1.65.0/grpc-protobuf-1.65.0.jar:/home/john/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/john/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:/home/john/.m2/repository/com/google/api/grpc/proto-google-common-protos/2.29.0/proto-google-common-protos-2.29.0.jar:/home/john/.m2/repository/io/grpc/grpc-protobuf-lite/1.65.0/grpc-protobuf-lite-1.65.0.jar:/home/john/.m2/repository/io/grpc/grpc-stub/1.65.0/grpc-stub-1.65.0.jar:/home/john/.m2/repository/org/apache/tomcat/annotations-api/6.0.53/annotations-api-6.0.53.jar:/home/john/.m2/repository/ch/qos/logback/logback-classic/1.5.6/logback-classic-1.5.6.jar:/home/john/.m2/repository/ch/qos/logback/logback-core/1.5.6/logback-core-1.5.6.jar:/home/john/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/home/john/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/home/john/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/home/john/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/home/john/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/home/john/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/home/john/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/john/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/home/john/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/home/john/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/john/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.boot.library.path" value="/home/john/.jdks/ms-17.0.15/lib"/>
+    <property name="sun.java.command" value="/media/john/Nuevo vol/IdeaProjects/grpc/grpc-playground/target/surefire/surefirebooter-20250711001013983_3.jar /media/john/Nuevo vol/IdeaProjects/grpc/grpc-playground/target/surefire 2025-07-11T00-10-13_682-jvmRun1 surefire-20250711001013983_1tmp surefire_0-20250711001013983_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/media/john/Nuevo vol/IdeaProjects/grpc/grpc-playground/target/test-classes:/media/john/Nuevo vol/IdeaProjects/grpc/grpc-playground/target/classes:/home/john/.m2/repository/io/grpc/grpc-netty-shaded/1.65.0/grpc-netty-shaded-1.65.0.jar:/home/john/.m2/repository/io/grpc/grpc-util/1.65.0/grpc-util-1.65.0.jar:/home/john/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.23/animal-sniffer-annotations-1.23.jar:/home/john/.m2/repository/io/grpc/grpc-core/1.65.0/grpc-core-1.65.0.jar:/home/john/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/john/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/home/john/.m2/repository/io/grpc/grpc-context/1.65.0/grpc-context-1.65.0.jar:/home/john/.m2/repository/com/google/guava/guava/32.1.3-android/guava-32.1.3-android.jar:/home/john/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/john/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/john/.m2/repository/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar:/home/john/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/home/john/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/home/john/.m2/repository/io/perfmark/perfmark-api/0.26.0/perfmark-api-0.26.0.jar:/home/john/.m2/repository/io/grpc/grpc-api/1.65.0/grpc-api-1.65.0.jar:/home/john/.m2/repository/io/grpc/grpc-protobuf/1.65.0/grpc-protobuf-1.65.0.jar:/home/john/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/john/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:/home/john/.m2/repository/com/google/api/grpc/proto-google-common-protos/2.29.0/proto-google-common-protos-2.29.0.jar:/home/john/.m2/repository/io/grpc/grpc-protobuf-lite/1.65.0/grpc-protobuf-lite-1.65.0.jar:/home/john/.m2/repository/io/grpc/grpc-stub/1.65.0/grpc-stub-1.65.0.jar:/home/john/.m2/repository/org/apache/tomcat/annotations-api/6.0.53/annotations-api-6.0.53.jar:/home/john/.m2/repository/ch/qos/logback/logback-classic/1.5.6/logback-classic-1.5.6.jar:/home/john/.m2/repository/ch/qos/logback/logback-core/1.5.6/logback-core-1.5.6.jar:/home/john/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/home/john/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/home/john/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/home/john/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/home/john/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/home/john/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/home/john/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/john/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/home/john/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/home/john/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/john/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/john"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/home/john/.jdks/ms-17.0.15"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/media/john/Nuevo vol/IdeaProjects/grpc/grpc-playground"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/media/john/Nuevo vol/IdeaProjects/grpc/grpc-playground/target/surefire/surefirebooter-20250711001013983_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.15+6-LTS"/>
+    <property name="user.name" value="john"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.11.0-29-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-11369869"/>
+    <property name="localRepository" value="/home/john/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="idea.version" value="2025.1.2"/>
+    <property name="java.version" value="17.0.15"/>
+    <property name="user.dir" value="/media/john/Nuevo vol/IdeaProjects/grpc/grpc-playground"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="17.0.15+6-LTS"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="blockingDeadLineTest" classname="sec11.Lec02UnaryDeadLineTest" time="130.044">
+    <system-out><![CDATA[00:10:26.129 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+00:10:26.130 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+00:10:26.132 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+00:10:26.139 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+00:10:26.141 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+00:10:26.142 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND SETTINGS: ack=true
+00:10:26.142 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+00:10:26.143 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND SETTINGS: ack=true
+00:10:26.144 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+00:10:26.144 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+00:10:26.146 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND SETTINGS: ack=true
+00:10:26.146 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND SETTINGS: ack=true
+00:10:26.151 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:authority: localhost:6565, :path: /sec11.BankService/WithDraw, :method: POST, :scheme: http, content-type: application/grpc, te: trailers, user-agent: grpc-java-netty/1.65.0, grpc-accept-encoding: gzip, grpc-timeout: 119977m] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+00:10:26.153 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND DATA: streamId=3 padding=0 endStream=true length=9 bytes=000000000408011032
+00:10:26.156 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /sec11.BankService/WithDraw, :authority: localhost:6565, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.65.0, grpc-accept-encoding: gzip, grpc-timeout: 119977m] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+00:10:26.158 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND DATA: streamId=3 padding=0 endStream=true length=9 bytes=000000000408011032
+00:10:26.158 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND PING: ack=false bytes=1234
+00:10:26.160 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND PING: ack=false bytes=1234
+00:10:26.160 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND PING: ack=true bytes=1234
+00:10:26.161 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND PING: ack=true bytes=1234
+00:10:26.163 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+00:10:26.165 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=7 bytes=0000000002080a
+00:10:26.167 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND HEADERS: streamId=3 headers=GrpcHttp2ResponseHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+00:10:26.169 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND DATA: streamId=3 padding=0 endStream=false length=7 bytes=0000000002080a
+00:10:26.169 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND PING: ack=false bytes=1234
+00:10:26.171 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND PING: ack=false bytes=1234
+00:10:26.171 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND PING: ack=true bytes=1234
+00:10:26.172 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND PING: ack=true bytes=1234
+00:10:26.171 INFO  [           main] &amp#27;[36msec11.Lec02UnaryDeadLineTest  &amp#27;[0;39m : amount: 10
+
+00:10:36.097 DEBUG [-worker-ELG-3-7] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x0b3aaf23, L:/127.0.0.1:6565 ! R:/127.0.0.1:39328] OUTBOUND GO_AWAY: lastStreamId=3 errorCode=0 length=13 bytes=6170705f726571756573746564
+00:10:36.098 DEBUG [-worker-ELG-3-7] &amp#27;[36mn.h.c.h.Http2ConnectionHandler&amp#27;[0;39m : [id: 0x0b3aaf23, L:/127.0.0.1:6565 ! R:/127.0.0.1:39328] Sending GOAWAY failed: lastStreamId '3', errorCode '0', debugData 'app_requested'. Forcing shutdown of the connection.
+io.grpc.netty.shaded.io.netty.channel.StacklessClosedChannelException: null
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source)
+00:10:46.172 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND PING: ack=false bytes=57005
+00:10:46.174 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND PING: ack=false bytes=57005
+00:10:46.174 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND PING: ack=true bytes=57005
+00:10:46.175 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND PING: ack=true bytes=57005
+00:11:06.196 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND PING: ack=false bytes=57005
+00:11:06.198 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND PING: ack=false bytes=57005
+00:11:06.198 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND PING: ack=true bytes=57005
+00:11:06.199 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND PING: ack=true bytes=57005
+00:11:26.221 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND PING: ack=false bytes=57005
+00:11:26.222 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND PING: ack=false bytes=57005
+00:11:26.222 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND PING: ack=true bytes=57005
+00:11:26.223 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND PING: ack=true bytes=57005
+00:11:46.243 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND PING: ack=false bytes=57005
+00:11:46.245 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND PING: ack=false bytes=57005
+00:11:46.246 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND PING: ack=true bytes=57005
+00:11:46.247 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND PING: ack=true bytes=57005
+00:12:06.268 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND PING: ack=false bytes=57005
+00:12:06.270 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND PING: ack=false bytes=57005
+00:12:06.270 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND PING: ack=true bytes=57005
+00:12:06.271 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND PING: ack=true bytes=57005
+00:12:26.155 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND RST_STREAM: streamId=3 errorCode=8
+00:12:26.155 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND RST_STREAM: streamId=3 errorCode=8
+00:12:26.157 INFO  [           main] &amp#27;[36msec11.Lec02UnaryDeadLineTest  &amp#27;[0;39m : error
+00:12:26.272 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND PING: ack=false bytes=57005
+00:12:26.273 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND PING: ack=false bytes=57005
+00:12:26.273 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND PING: ack=true bytes=57005
+00:12:26.273 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND PING: ack=true bytes=57005
+00:12:27.156 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND GO_AWAY: lastStreamId=2147483647 errorCode=0 length=8 bytes=6d61785f69646c65
+00:12:27.157 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND PING: ack=false bytes=40715087873
+00:12:27.158 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND GO_AWAY: lastStreamId=2147483647 errorCode=0 length=8 bytes=6d61785f69646c65
+00:12:27.160 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND PING: ack=false bytes=40715087873
+00:12:27.160 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] OUTBOUND PING: ack=true bytes=40715087873
+00:12:27.161 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] INBOUND PING: ack=true bytes=40715087873
+00:12:27.161 DEBUG [-worker-ELG-3-5] &amp#27;[36mg.n.s.i.g.n.NettyServerHandler&amp#27;[0;39m : [id: 0x2c319c61, L:/127.0.0.1:6565 - R:/127.0.0.1:40868] OUTBOUND GO_AWAY: lastStreamId=3 errorCode=0 length=8 bytes=6d61785f69646c65
+00:12:27.164 DEBUG [-worker-ELG-3-3] &amp#27;[36mg.n.s.i.g.n.NettyClientHandler&amp#27;[0;39m : [id: 0xf6261f35, L:/127.0.0.1:40868 - R:localhost/127.0.0.1:6565] INBOUND GO_AWAY: lastStreamId=3 errorCode=0 length=8 bytes=6d61785f69646c65
+]]></system-out>
+  </testcase>
+</testsuite>

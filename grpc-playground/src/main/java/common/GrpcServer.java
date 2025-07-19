@@ -5,6 +5,7 @@ import io.grpc.*;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class GrpcServer {
@@ -20,7 +21,10 @@ public class GrpcServer {
     }
 
     public static GrpcServer create(int port, BindableService... services){
-        ServerBuilder<?> builder = ServerBuilder.forPort(port);
+        ServerBuilder<?> builder = ServerBuilder.forPort(port)
+                .keepAliveTime(20, TimeUnit.SECONDS)
+                .keepAliveTimeout(1, TimeUnit.SECONDS)
+                .maxConnectionIdle(1, TimeUnit.SECONDS);
         Arrays.asList(services).forEach(builder::addService);
         return new GrpcServer(builder.build());
 

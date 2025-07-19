@@ -5,7 +5,6 @@ import common.AbstractChannelTest;
 import common.GrpcServer;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import sec06.BankService;
 
 import java.io.IOException;
 
