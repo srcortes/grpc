@@ -1,5 +1,4 @@
 syntax = "proto3";
-
 package sec01;
 option java_package = "com.grpc.models.sec01";
 option java_outer_classname = "Persons";

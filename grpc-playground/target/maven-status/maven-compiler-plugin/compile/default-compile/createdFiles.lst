@@ -2,4 +2,5 @@ com\grpc\models\sec01\Persons$Person$1.class
 com\grpc\models\sec01\Persons.class
 com\grpc\models\sec01\Persons$Person$Builder.class
 com\grpc\models\sec01\Persons$PersonOrBuilder.class
+com\grpc\Main.class
 com\grpc\models\sec01\Persons$Person.class
