@@ -1,7 +1,7 @@
 version: "3"
 services:
   nginx:
-    image: nginx:1.25-alpine
+    image: nginx:1.29.3
     volumes:
       - ./config:/etc/nginx/conf.d
     ports:
